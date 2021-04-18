@@ -1,0 +1,45 @@
+body {
+    background-color: #ccc;
+}
+
+button {
+    display: flex;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    padding: 20px;
+    margin: 10px;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    outline: none;
+}
+
+.parentbox1 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: fit-content;
+}
+
+.parentbox2 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: fit-content;
+}
+
+.parentbox3 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: fit-content;
+}
+
+p {
+    font-size: 2em;
+}
