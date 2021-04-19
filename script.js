@@ -50,20 +50,20 @@ let data = new FormData(theForm);
 theForm.addEventListener("submit", (e) => {
   e.preventDefault();
   let newListItem = document.createElement("li");
-  if (options.type === penny.type) {
+  let myList = document.getElementById("coinspot");
+  if (penny) {
     newListItem.innerText = `${text1}`;
     myList.append(newListItem);
-  } else if (options.type === nickel.type) {
+  } else if (nickel) {
     newListItem.innerText = `${text2}`;
     myList.append(newListItem); 
-  } else if (options.type === dime.type) {
+  } else if (dime) {
     newListItem.innerText = `${text3}`;
     myList.append(newListItem);   
-  } else if (options.type === quarter.type) {
+  } else if (quarter) {
     newListItem.innerText = `${text4}`;
     myList.append(newListItem);  
   }
-  let myList = document.getElementById("coinspot");
   newListItem.classList.add("coins");
 });
 
