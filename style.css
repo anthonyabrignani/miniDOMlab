@@ -19,6 +19,18 @@ button {
     outline: none;
 }
 
+.coins {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    margin: 5px;
+    border: 2px solid black;
+    background-color: silver;
+    border-radius: 50%;
+
+}
+
 .parentbox1 {
     display: flex;
     justify-content: flex-start;
