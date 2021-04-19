@@ -1,11 +1,11 @@
 "use strict";
 {
-  let total = 0.00;
+  let total = 0.0;
 
   document.getElementById("lime").addEventListener("mousedown", costFunction1);
 
   function costFunction1() {
-    let price = 2.00;
+    let price = 2.0;
     document.getElementById("cost").innerText = total += price;
   }
 
@@ -14,7 +14,7 @@
     .addEventListener("mousedown", costFunction2);
 
   function costFunction2() {
-    let price = 3.00;
+    let price = 3.0;
     document.getElementById("cost").innerText = total += price;
   }
 
@@ -23,48 +23,31 @@
     .addEventListener("mousedown", costFunction3);
 
   function costFunction3() {
-    let price = 4.00;
+    let price = 4.0;
     document.getElementById("cost").innerText = total += price;
   }
 
   document.getElementById("fruit").addEventListener("mousedown", costFunction4);
 
   function costFunction4() {
-    let price = 6.00;
+    let price = 6.0;
     document.getElementById("cost").innerText = total += price;
   }
 }
 
 let theForm = document.getElementById("theForm");
-let options = document.getElementById("coins");
-let penny = document.getElementById("penny");
-let nickel = document.getElementById("nickel");
-let dime = document.getElementById("dime");
-let quarter = document.getElementById("quarter");
-let text1 = options[0].value;
-let text2 = options[1].value;
-let text3 = options[2].value;
-let text4 = options[3].value;
-let data = new FormData(theForm);
 
 theForm.addEventListener("submit", (e) => {
   e.preventDefault();
-  let newListItem = document.createElement("li");
-  let myList = document.getElementById("coinspot");
-  if (penny) {
-    newListItem.innerText = `${text1}`;
+  let coinName = document.getElementById("coins").value;
+  let coinNumber = parseInt(document.getElementById("numberInput").value);
+  for (let i = 0; i < coinNumber; i++) {
+    let newListItem = document.createElement("div");
+    let myList = document.getElementById("coinspot");
+    newListItem.innerText = coinName;
     myList.append(newListItem);
-  } else if (nickel) {
-    newListItem.innerText = `${text2}`;
-    myList.append(newListItem); 
-  } else if (dime) {
-    newListItem.innerText = `${text3}`;
-    myList.append(newListItem);   
-  } else if (quarter) {
-    newListItem.innerText = `${text4}`;
-    myList.append(newListItem);  
+    newListItem.classList.add("coins");
   }
-  newListItem.classList.add("coins");
 });
 
 document.getElementById("on").addEventListener("click", turnOn);
@@ -101,6 +84,8 @@ function endIt() {
   end2.disabled = true;
   let end3 = document.getElementById("toggle");
   end3.disabled = true;
+  let end4 = document.getElementById("end");
+  end4.disabled = true;
   let bulbGone = document.getElementById("lightbulb");
   bulbGone.remove("lightbulb");
 }
